@@ -1,0 +1,181 @@
+/*Делаем обнуление стилей по умолчанию для кросбраузерности*/
+/*Очищаем все отсупы и границы*/
+/* "*" означает, что мы обращаемся ко всем тегам на странице */
+/*padding - внутренний отступ, margin - внешний отступ*/
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*применяем конструкцию box-sizing со значением border-box*/
+/*она меняет подсчет ширины блока так, чтобы было удобно верстать*/
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Убираем линии обводки у некоторых браузеров*/
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/*Перечисляем некоторые HTML теги и делаем их блочными*/
+nav,footer,header,aside{display: block;}
+
+/*уравняем поведение шрифтов и элементов в тегах HTML и BODY на разных браузерах*/
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-ajust: 100%;
+	-moz-text-size-ajust: 100%;
+	-webkit-text-size-ajust: 100%;
+}
+
+/*Просим теги форм унаследовать семейство шрифта*/
+input,button,textarea{font-family: inherit;}
+
+/*Убираем некоторые особенности в разных браузерах*/
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+/*Обнуляем все заголовки*/
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+/*Теперь у нас чистый лист и мы управяем стилем сами, как захотим*/
+
+body{
+	padding: 0px;
+}
+
+.block{
+	width: 1440px;
+	height: 1700px;
+	padding: 123px 0 0px 291px;
+	background-color: #e8e8e8;;
+}
+
+.text{
+	font-size: 14px;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #000000;
+	margin: 0 0 12px 0;
+}
+
+.list1{
+	
+}
+
+.list1 li{
+	font-size: 20px;
+	line-height: 36px;
+	color: #273d46;
+}
+
+.list1 li:nth-child(1){
+	text-decoration: line-through;
+	padding: 0 0 0px 30px;
+	background: url(../img/check_icon.png) left 5px no-repeat;
+}
+
+.list1 li:nth-child(2){
+	font-weight: 700;
+	padding: 0 0 0px 30px;
+	background: url(../img/check_icon.png) left 5px no-repeat;
+}
+
+.list1 li:nth-child(3){
+	font-style: italic;
+	padding: 0 0 0px 30px;
+	background: url(../img/check_icon.png) left 5px no-repeat;
+}
+
+.list1 li:nth-child(4){
+	text-transform: uppercase;
+	padding: 0 0 81px 30px;
+	background: url(../img/check_icon.png) left 5px no-repeat;
+}
+}
+
+.list2{
+
+}
+
+.list2 li{
+	font-size: 20px;
+	line-height: 36px;
+	color: #273d46;
+}
+
+.list2 li:nth-child(1){
+	padding: 0 0 0px 30px;
+	background: url(../img/check_icon.png) left 5px no-repeat;
+}
+
+.list2 li:nth-child(2){
+	padding: 0 0 0px 30px;
+	background: url(../img/check_icon.png) left 5px no-repeat;
+}
+
+.list2 li:nth-child(2):hover{
+	color: #d55a5a;
+	padding: 0 0 0px 30px;
+	background: url(../img/layers_red.png) left 5px no-repeat;
+}
+
+.list2 li:nth-child(3){
+	padding: 0 0 0px 30px;
+	background: url(../img/check_icon.png) left 5px no-repeat;
+}
+
+.list2 li:nth-child(4){
+	padding: 0 0 137px 30px;
+	background: url(../img/check_icon.png) left 5px no-repeat;
+}
+
+.textbutton{
+	background: url('../img/layers.png') center right 20px no-repeat;
+	display: block;
+	width: 199px;
+	height: 44px;
+	box-shadow: 0px 6px 40px 0px rgba(128,183,179,0.54);
+	background-color: rgba(128,183,179,0.54);
+	border-radius: 30px;
+	font-size: 14px;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #ffffff;
+	margin: 0 0 137px 25px;
+}
+
+.textbutton:hover{
+	background-color: #3a5856;
+	box-shadow: 0px 6px 40px 0px rgba(128,183,179,0.54);
+}
+
+.textbutton:active{
+	background-color: #818181;
+}
+
+.textinput{
+	width: 294px;
+	height: 52px;
+	border: 1px solid #b0b0b0;
+}
+
+.textinput:focus{
+	border: 1px solid #7fbed5;
+	box-shadow: 0px 0px 20px -1px rgba(127,190,213,0.93);
+}
