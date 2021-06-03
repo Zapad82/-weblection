@@ -1,0 +1,198 @@
+/*Делаем обнуление стилей по умолчанию для кросбраузерности*/
+/*Очищаем все отсупы и границы*/
+/* "*" означает, что мы обращаемся ко всем тегам на странице */
+/*padding - внутренний отступ, margin - внешний отступ*/
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*применяем конструкцию box-sizing со значением border-box*/
+/*она меняет подсчет ширины блока так, чтобы было удобно верстать*/
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Убираем линии обводки у некоторых браузеров*/
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/*Перечисляем некоторые HTML теги и делаем их блочными*/
+nav,footer,header,aside{display: block;}
+
+/*уравняем поведение шрифтов и элементов в тегах HTML и BODY на разных браузерах*/
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-ajust: 100%;
+	-moz-text-size-ajust: 100%;
+	-webkit-text-size-ajust: 100%;
+}
+
+/*Просим теги форм унаследовать семейство шрифта*/
+input,button,textarea{font-family: inherit;}
+
+/*Убираем некоторые особенности в разных браузерах*/
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+/*Обнуляем все заголовки*/
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+/*Теперь у нас чистый лист и мы управяем стилем сами, как захотим*/
+
+/*background - управляет фоно элемента:
+определяет цвет устанавливает фоновое изображение, задает начальную позицию
+фонового изображения, настраивает повтор фонового изображения, задает метод скролла 
+фонового изображения, масштабирует фоновое изображение согласно размерам
+определяет градиентную заливку
+*/
+
+body{
+	background-size: 400px;
+	width: 1440px;
+	background-color: #e8e8e8;
+}
+
+.body{
+	width: 1190px;
+	margin: 106px 108px 0 142px;
+	padding-bottom: 137px;
+	background: url('../img/layers\ \(2\).png') top 10px left 0px no-repeat;
+
+}
+
+.body1 {
+	margin: 0 212px 0 157px;
+	background-position: center;
+
+}
+
+.uppercase {
+	opacity: 0.6;
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 40px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #273d46;
+	text-align: center;
+}
+
+.timesnewroman {
+	font-family: 'Times New Roman';
+	font-size: 36px;
+	line-height: 50px;
+	color: #273d46;
+	background-position: center;
+	font-weight: 400;
+
+	text-align: center;
+	margin-bottom: 87px;
+}
+
+.image {
+	width: 841px;
+	height: 561px;
+	box-shadow: 0px 15px 65px 0px rgba(15,16,16,0.15);
+	image-orientation: inherit;
+	padding: 10px;
+	margin-bottom: 97px;
+}
+
+.timesnewroman24{
+	padding: 0 50px 0 35px;
+	opacity: 0.8;
+	font-family: 'Times New Roman';
+	font-size: 24px;
+	line-height: 40px;
+	font-weight: 400;
+	color: #273d46;
+	margin-bottom: 64px;
+}
+
+.list{
+	margin: 0 0 50px 0;
+}
+
+.list li.arial {
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 36px;
+	font-weight: 400;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+	color: #273d46;
+	margin: 0 50px 0 35px;
+	background: url('../img/check_icon_37.png') top 10px left 0px no-repeat;
+	padding: 0px 0px 0px 30px;
+}
+
+.list li.italic {
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 36px;
+	font-weight: 400;
+	font-style: italic;
+	color: #80b7b3;
+	margin: 0 50px 0 35px;
+	background: url('../img/check_icon_37.png') top 10px left 0px no-repeat;
+	padding: 0px 0px 0px 30px;
+}
+
+.list li.bold{
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 36px;
+	font-weight: 700;
+	color: #273d46;
+	margin: 0 50px 0 35px;
+	background: url('../img/check_icon_37.png') top 10px left 0px no-repeat;
+	padding: 0px 0px 0px 30px;
+}
+
+.list li.trought {
+	color: #273d46;
+	background: url('../img/check_icon_37.png') top 10px left 0px no-repeat;
+	enable-background: unset;
+}
+
+.list li.trought{
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 36px;
+	text-decoration: line-through;
+	color: #273d46;
+	color: hsla(0, 0%, 70%, 1);
+	margin: 0 50px 0 35px;
+	
+	padding: 0px 0px 0px 30px;
+}
+
+
+a.button{
+	margin: 0 50px 0 35px;
+	padding: 11px 50px;
+	border-radius: 30px;
+	background: url('../img/layers.png') center right 20px no-repeat;
+	background-color: rgba(128,183,179,0.54);
+	box-shadow: 0px 6px 40px 0px rgba(128,183,179,0.54);
+    color: white;
+	font-size: 14px;
+	position: relative;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
