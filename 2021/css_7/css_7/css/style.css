@@ -1,0 +1,73 @@
+/*Делаем обнуление стилей по умолчанию для кросбраузерности*/
+/*Очищаем все отсупы и границы*/
+/* "*" означает, что мы обращаемся ко всем тегам на странице */
+/*padding - внутренний отступ, margin - внешний отступ*/
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*применяем конструкцию box-sizing со значением border-box*/
+/*она меняет подсчет ширины блока так, чтобы было удобно верстать*/
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Убираем линии обводки у некоторых браузеров*/
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/*Перечисляем некоторые HTML теги и делаем их блочными*/
+nav,footer,header,aside{display: block;}
+
+/*уравняем поведение шрифтов и элементов в тегах HTML и BODY на разных браузерах*/
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-ajust: 100%;
+	-moz-text-size-ajust: 100%;
+	-webkit-text-size-ajust: 100%;
+}
+
+/*Просим теги форм унаследовать семейство шрифта*/
+input,button,textarea{font-family: inherit;}
+
+/*Убираем некоторые особенности в разных браузерах*/
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+/*Обнуляем все заголовки*/
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+/*Теперь у нас чистый лист и мы управяем стилем сами, как захотим*/
+
+body {
+	padding: 30px;
+}
+
+.text {
+	font-size: 24px;
+	line-height: 33px;
+	margin: 0 0 30px 0;
+}
+
+.list {
+
+}
+
+.list li {
+	font-size: 24px;
+	margin: 0 0 20px 0;
+}
