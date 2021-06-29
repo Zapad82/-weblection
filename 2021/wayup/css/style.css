@@ -1,35 +1,197 @@
-h2 {
-    background-color: green;
-    color: #fff;
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #201b2d;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.02em;
 }
-.section1 {
 
+div, p, input, button, form, span, a, ul, li {
+    box-sizing: border-box;
 }
-.color-text {
-    color: red;
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
 }
-.color-block-text {
-    background-color: blue;
-    width: 100px;
-    margin-bottom: 120px;
+
+p {
+    line-height: 1.65em;
 }
-.section2 {
+
+.container {
+    width: 1171px;
+    margin: 0 auto;
 }
-.h2-section2, .h2-footer{
-    padding-left: 5px;
+
+.header {
+    background: rgba(4,219,223,1);
+    background: -moz-linear-gradient(-45deg, rgba(4,219,223,1) 0%, rgba(3,120,253,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(4,219,223,1)), color-stop(100%, rgba(3,120,253,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(4,219,223,1) 0%, rgba(3,120,253,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(4,219,223,1) 0%, rgba(3,120,253,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(4,219,223,1) 0%, rgba(3,120,253,1) 100%);
+    background: linear-gradient(135deg, rgba(4,219,223,1) 0%, rgba(3,120,253,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04dbdf', endColorstr='#0378fd', GradientType=1 );
+    padding-top: 70px;
+    color: #fff;
+    padding-bottom: 145px;
 }
-.section3-padding {
-    padding: 40px;
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
 }
-.section3-padding-paragraph {
-    padding-left: 80px;
+
+.offer {
+    margin-top: 150px;
+    width: 570px;
 }
-.list-ul {
+
+.title {
+    font-size: 37px;
+    margin-bottom: 47px;
+    
 }
-.list-li {
-    border: 1px solid #000;
+
+.big-text {
+    font-size: 59px;
+}
+
+.intro {
+    font-size: 16px;
+    margin-top: 47px;
+    margin-bottom: 45px;
+    width: 410px;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffd429;
+    color: #2e2a1b;
+    display: block;
+    width: 222px;
+    font-weight: 900;
+    padding: 21px 26px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.btn:hover{
+    background: #a48b20;
+    color: #000;
+}
+
+.travel {
+    margin-top: 58px;
+    width: 520px;
+    height: 520px;
+}
+
+.learn {
+    color: #201b2d;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 108px;
+    padding-bottom: 120px;
+}
+
+.section-title {
     font-size: 30px;
+    font-weight: 700;
+    text-align: center;
 }
-footer {
-    padding-bottom: 200px;
+
+.dreams {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
 }
+
+.dream{
+    width: 295px;
+    background: url('../img/icons8_time_machine_96_89.png') no-repeat;
+    background-position: center bottom 125px;
+}
+
+.dream-title {
+    font-size: 19px;
+    font-weight: 700;
+    padding-top: 170px;
+}
+
+.dream-travel {
+    width: 270px;
+    background: url('../img/icons8_beach_96_99.png') no-repeat;
+    background-position: center bottom 125px;
+}
+
+.dream-worth {
+    width: 305px;
+    background: url('../img/icons8_rocket_96_106.png') no-repeat;
+    background-position: center bottom 125px;
+}
+
+.dream-text {
+    margin-top: 17px;
+}
+
+.mail {
+    background: #ecf3f8;
+    padding-top: 104px;
+    padding-bottom: 106px;
+}
+
+.div-form {
+    display: block;
+    text-align: center;
+}
+
+.form {
+    padding-top: 57px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.input {
+    width: 345px;
+    height: 48px;
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+    font-size: 15px;
+    opacity: 0.54;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    color: #201b2d;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.btn-form {
+    width: 345px;
+    height: 56px;
+    border:0;
+    cursor: pointer;
+}
+
+.footer {
+    background: #164d7a;
+}
+
+.credits {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    margin: 0;
+    text-align: center;
+}
+
