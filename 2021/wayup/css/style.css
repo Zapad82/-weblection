@@ -43,10 +43,11 @@ p {
 .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .offer {
-    margin-top: 150px;
+    /*margin-top: 150px;*/
     width: 570px;
 }
 
@@ -195,3 +196,93 @@ p {
     text-align: center;
 }
 
+/*Responsive*/
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+    .wrapper {
+        flex-direction: column;
+    }
+    .offer {
+        width: 100%;
+    }
+    .intro {
+        width: 100%;
+    }
+    .travel {
+        margin: 0 auto;
+        margin-top: 58px;
+    }
+    .dreams {
+        flex-direction: column;
+    }
+    .dream {
+        width: auto;
+        margin-bottom: 30px;
+    }
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+    .travel {
+        width: 100%;
+    }
+
+}
+
+/* 0px - 576px */
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+    .offer {
+        width: 100%;
+    }
+    .travel {
+        width: 100%;
+        height: auto;
+    }
+    .input {
+        width: 100%;
+        height: 48px;
+        border: 1px solid #bbbbbb;
+        border-radius: 3px;
+        font-size: 10px;
+        opacity: 0.54;
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: 0.02em;
+        font-weight: 400;
+        color: #201b2d;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        display: block;
+    }
+    .btn {
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        background: #ffd429;
+        color: #2e2a1b;
+        display: block;
+        font-weight: 900;
+        padding: 21px 26px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.5s ease;
+    }
+    .input {
+        width: 100%;
+    }
+}
