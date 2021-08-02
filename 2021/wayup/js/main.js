@@ -1,122 +1,82 @@
-/* 
-    Задание 1:
+/* TABS */
+$(".card").on("click", function () {
+  let currTab = $(this).parent().index();
 
-    Вывести в консоль с помощью цикла FOR все четные числа от 10 до 50
-*/
-console.log('Задание 1:');
-console.log('Вывести в консоль с помощью цикла FOR все четные числа от 10 до 50:')
-for (let i = 10; i <= 50; i = i + 2) {
-    console.log(i)
+  $(".card").removeClass("card-active");
+  $(this).addClass("card-active");
+
+  $(".tab-content").removeClass("active");
+  $(".tab-content").eq(currTab).addClass("active");
+});
+
+/* HAMBURGER */
+$(".hamburger").on("click", function () {
+  $(".head__menu").toggle();
+});
+
+$(".menu-close").on("click", function () {
+  $(".head__menu").hide();
+});
+
+/* PARALLAX */
+let scene = document.getElementById("scene");
+let parallaxInstance = new Parallax(scene);
+
+/* SLIDER */
+const swiper = new Swiper(".swiper-container", {
+  direction: "horizontal",
+  loop: true,
+  spaceBetween: 50,
+  slidesPerView: 3,
+  stopOnLastSlide: false,
+  autoplay: {
+    delay: 2000,
+  },
+});
+
+/* YANDEX MAP */
+ymaps.ready(init);
+function init() {
+  //создание карты
+  var myMap = new ymaps.Map("map", {
+    //координаты центра карты.
+    //порядок по умолчанию: "широта", "долота"
+    //Чтобы не определять координаты центра карты вручную,
+    //воспользуйтесь инструментом Определние координат.
+    center: [55.76, 37.64],
+    //уровень масштабирования. Допустимые значения:
+    //от 0 (весь мир) до 19.
+    zoom: 7,
+    controls: ["zoomControl", "geolocationControl"],
+  });
 }
-console.log(' ');
 
-/* 
-    Задание 2:
+$.validator.addMethod(
+  "regex",
+  function (value, element, regexp) {
+    let regExsp = new RegExp(regexp);
+    return regExsp.test(value);
+  },
+  "Please check your input"
+);
 
-    Необходимо создать объект в котором вы опишите самого себя в формате : "свойство: значение"
-
-    Список свойств:
-
-    - Имя(string)
-    - Фамилия(string)
-    - Возраст(number)
-    - Есть ли домашние животные(boolean)
-*/
-console.log('Задание 2:');
-console.log('Cоздать объект в котором вы опишите самого себя в формате: "свойство: значение":');
-const objectMe = {
-    firstName : "Наиль",
-    lastName : "Назаркулов",
-    age: 38,
-    pets: false
-}
-console.log("Имя: " + objectMe.firstName);
-console.log("Фамилия: " + objectMe.lastName);
-console.log("Возраст: " + objectMe.age);
-console.log("Есть ли домашнее животное: " + objectMe.pets);
-console.log(' ');
-/* 
-    Задание 3:
-
-    Отрывок из текста А.С Пушкин, Капитанская дочка был разбит на небольшие кусочки и помещен в массив. 
-    Необходимо собрать этот текст из массива и придать ему первоначальный вид.
-
-    Текст до разбивки на части:
-
-    "В ту же ночь приехал я в Симбирск, где должен был пробыть сутки для закупки нужных вещей,
-    что и было поручено Савельичу. Я остановился в трактире. Савельич с утра отправился по лавкам"
-
-    Массив: 
-    const array = [
-        'я в Симбирск,',
-        'в трактире.',
-        'с утра',
-        'В ту же ночь',
-        'Я остановился',
-        'для закупки', 
-        'что и было поручено Савельичу.',
-        'приехал,',
-        'где должен был',
-        'нужных вещей,',
-        'отправился по лавкам',
-        'пробыть сутки',
-        'Савельич'
-    ]
-
-   итоговый текст должен быть собран из массива array и результат записать в переменную result
-*/
-console.log('Задание 3:');
-console.log('Необходимо собрать текст из массива и придать ему первоначальный вид:');
-const array = [
-    'я в Симбирск,',
-    'в трактире.',
-    'с утра',
-    'В ту же ночь',
-    'Я остановился',
-    'для закупки', 
-    'что и было поручено Савельичу.',
-    'приехал',
-    'где должен был',
-    'нужных вещей,',
-    'отправился по лавкам',
-    'пробыть сутки',
-    'Савельич'
-];
-const result = array[3] + ' ' + array[7] + ' ' + array[0] + ' ' + array[8] + ' ' + array[11] + ' ' + array[5] + ' ' + array[9] + ' ' + array[6] + ' ' + array[4] + ' ' + array[1] + ' ' + array[12] + ' ' + array[2] + ' ' + array[10];
-console.log(result);
-console.log(' ');
-/* 
-    Задание 4:
-
-    Напишите функцию, в теле которой будет находится следующий код:
-
-    const fullName = `${firstName} ${lastName}`;
-    console.log(fullName);
-
-    firstName и lastName - это параметры функции
-
-    При вызове функции передайте ей, в качестве аргумента, свое имя и фамилию.
-*/
-console.log('Задание 4:');
-console.log('Написать функцию с кодом в теле:');
-const fullName = (firstName, lastName) => {
-    const fullName = `${firstName} ${lastName}`;
-    console.log(fullName);
-};
-fullName('Наиль', 'Назаркулов');
-console.log(' ');
-
-
-/* 
-    Задание 5:
-
-    Вывести в консоль с помощью цикла WHILE все нечетные числа от 21 до 67
-    
-*/
-console.log('Задание 5:');
-console.log('Вывести в консоль с помощью цикла WHILE все нечетные числа от 21 до 67:');
-let oddNumber = 21;
-while (oddNumber <= 67) {
-    console.log(oddNumber);
-    oddNumber = oddNumber + 2;
-}
+/* Валидация в форме */
+$("form").validate({
+  rules: {
+    firstName: {
+      required: true,
+      regex: "[A-Za-z]{1,32}",
+    },
+    phoneNumber: {
+      digits: true,
+      required: true,
+      minlength: 10,
+      maxlength: 11,
+      regex: "[0-9]+",
+    },
+  },
+  messages: {
+    firstName: "Введите имя правильно",
+    phoneNumber: "Введите ваш номер",
+  },
+});

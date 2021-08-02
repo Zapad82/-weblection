@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+
+    <title>Форма заказа</title>
+  </head>
+  <body>
+    <button class="open-button" onclick="openForm()" id="btn">Кликни</button>
+
+    <div class="form-popup" id="myForm"><div>
+
+        <div class="title-popup">Получите набор файлов для руководителя:
+          <div class="popup-left-row">
+
+            <img src="./images/doc.png" alt="" class="img" />
+            <img src="./images/xls.png" alt="" class="img" />
+            <img src="./images/pdf.png" alt="" class="img" />
+            <img src="./images/pdf.png" alt="" class="img" />
+            <img src="./images/pdf.png" alt="" class="img" />
+           <img src="./images/pdf.png" alt="" class="img" />
+            <img src="./images/pdf.png" alt="" class="img" />
+            <div class="logo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="form-container">
+        <form action="#">
+          <label for="name" class="text-form">Введите Email для получения файлов:</label>
+          <input type="text" class="input-label" placeholder="&#160;&#160;&#160;E-mail" name="email" required />
+
+          <label for="email" class="text-form">Введите телефон для подтверждения досупа:</label>
+          <input class="input-label"
+            type="number"
+            id="phone"
+            placeholder="&#160;&#160;&#160;+7(000)000-00-00"
+            name="phoneNumber"
+            required
+         />
+         <button type="submit" class="btn image-click">Скачать файлы</button>
+         </button>
+         <p class="files-names">PDF 4,7 MB&#160;&#160;&#160;DOC 0,8 MB&#160;&#160;&#160;XLS 1,2 MB</p>
+        </form>
+
+      </div>
+      <div type="button" class="btn-cancel" onclick="closeForm()">×</div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
